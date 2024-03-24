@@ -16,6 +16,11 @@ public class PostsDataHandler {
 		this.dirPath = ".\\Data";
 	}
 
+	public PostsDataHandler(String url) {
+		this.postsUrl = url;
+		this.dirPath = ".\\Data";
+	}
+
 	public void savePostsDataFromApi() {
 		final RestTemplate restTemplate = new RestTemplate();
 		final String posts = restTemplate.getForObject(postsUrl, String.class);

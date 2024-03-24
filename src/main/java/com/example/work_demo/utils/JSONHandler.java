@@ -23,18 +23,23 @@ public final class JSONHandler {
 	}
 
 	private static ArrayList<JSONObject> getJsonObjectsFromString(final String data){
-		final JSONArray jsonArray = parseString(data);
-		return getJsonObjectsFromJsonArray(jsonArray);
+		return parseString(data);
 	}
 
-	private static JSONArray parseString(final String data){
+	private static ArrayList<JSONObject> parseString(final String data){
+		ArrayList<JSONObject> jsonObjects = new ArrayList<>();
 		try{
-			return (JSONArray) parser.parse(data);
+			if(parser.parse(data) instanceof JSONObject jsonObject){
+                jsonObjects.add(jsonObject);
+			}
+			else{
+				jsonObjects.addAll(getJsonObjectsFromJsonArray((JSONArray) parser.parse(data)));
+			}
 		}
 		catch (final ParseException e){
 			e.printStackTrace();
-			return new JSONArray();
 		}
+		return jsonObjects;
 	}
 
 	private static ArrayList<JSONObject> getJsonObjectsFromJsonArray(final JSONArray jsonArray){
