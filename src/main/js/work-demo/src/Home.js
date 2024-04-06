@@ -11,6 +11,9 @@ function Home() {
             <Container fluid>
                 <Button color="link"><Link to="/get_data">Download data from API</Link></Button>
             </Container>
+            <Container fluid>
+                <Button color="link"><Link to="/get_all_posts">Get list of downloaded post files</Link></Button>
+            </Container>
         </div>
     );
 }

@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 
 function DownloadData() {
 
-    const [groups, setGroups] = useState("");
+    const [info, setInfo] = useState("");
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ function DownloadData() {
         fetch('api/get_posts')
             .then(response => response.text())
             .then(data => {
-                setGroups(data);
+                setInfo(data);
                 setLoading(false);
             })
     }, []);
@@ -25,7 +25,7 @@ function DownloadData() {
         <div>
             <AppNavbar/>
             <Container fluid>
-                <h3>{groups}</h3>
+                <h3>{info}</h3>
             </Container>
         </div>
     );
