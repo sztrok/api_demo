@@ -1,3 +1,5 @@
+fullstack api demo
+
 użyte technologie:
 maven 3.9.5
 java 22
