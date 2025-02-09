@@ -14,7 +14,7 @@
 	<name>work_demo</name>
 	<description>work_demo</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

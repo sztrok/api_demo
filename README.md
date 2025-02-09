@@ -1,14 +1,14 @@
-fullstack api demo
+# Fullstack api demo
+ 
+This application downloads dummy files from https://jsonplaceholder.typicode.com/posts and saves them.
+Files and data can be then displayed in very simple frontend app.
 
-użyte technologie:
+## Used technologies:
 maven 3.9.5
-java 22
+java 21
 spring boot 3.2.4
 node js 10.5.0
 
+To run the application, run `docker-compose up --build` in root directory.
 
-aby uruchomić backend należy wykonać mvn clean install na module work_demo, następnie uruchomić program WorkDemoApplication
-
-aby uruchomić frontend należy w folderze src/main/js/work-demo puścić komendę npm start
-
-pobrane pliki zapiszą się w folderze Data
+Files will be saved in **Data** directory.
